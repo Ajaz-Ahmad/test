@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        .topnav{
+            background-color:yellow;
+            overflow:hidden;
+            margin-top:0px;
+            }
+        .topnav p{
+            float:right;
+            display:block;
+            color:Background;
+            text-align:center;
+            text-decoration:none;
+            font-size:12px;
+            position:relative;
+            margin:10px 10px 20px 10px;
+            padding-right:50px;
+        }
+        .topnav a{
+            float: right;
+            display: block;
+            color:black;
+            text-align:center;
+            padding-right:10px;
+            text-decoration:none;
+            font-size:12px;
+            background:yellow;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+    <script src="../Scripts/angular-aria.js"></script>
+    <script src="../Scripts/angular-animate.js"></script>
+    <div class="topnav" id="myTopnav" ng-app="App" ng-controller="Ctrl">
+        <img src="../Images/logo.jpg" height="60" width="80" style="margin:0px 150px 0px 40px"/>
+        <a href="#myAccount" style="margin-left:30px">My Account</a>
+        <p>Balance:{{balance}}</p>
+        <p>Liabiltiy:{{liability}}</p>
+     </div>
+    
+    <script src="../Scripts/angular-material.js"></script>
+    <div ng-app="NewApp" ng-controller="NewCtrl" >
+        
+            <sidenav>
+               hello
+            </sidenav>
+    
+    </div>
+    <script src="../Scripts/angular.min.js"></script>
+    <script>
+        var app = angular.module("App", []);
+        
+        var newapp=angular.module('NewApp', ['ngMaterial'])
+        newapp.controller("NewCtrl", function($scope){
+
+        });
+
+        app.controller("Ctrl", function ($scope) {
+            $scope.balance = 888888;
+            $scope.liability = 888888;
+        });
+    </script>
+</body>
+</html>

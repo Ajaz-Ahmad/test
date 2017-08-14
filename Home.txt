@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+	<meta charset="utf-8" />
+    <style>
+        .topnav{
+            background-color:yellow;
+            overflow:hidden;
+            margin-top:0px;
+            }
+        .topnav input{
+            float:right;
+            display:block;
+            color:Background;
+            text-align:center;
+            text-decoration:none;
+            font-size:12px;
+            position:relative;
+            margin:20px 10px 20px 0px;
+        }
+        .topnav button{
+            background-color: #555555; /* Black */
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 10px;
+            float:right;
+            margin:20px 0px 20px 0px;
+            width:100px;
+            height:20px;
+        }
+        .view1 img{
+            display:block;
+            width:100%;
+            height:auto;
+            position:absolute;
+        }
+        .view1 a{
+            border:0.5px solid black;
+            box-sizing:border-box;
+            float: left;
+            display: block;
+            color:black;
+            text-align:center;
+            padding:14px 16px;
+            text-decoration:none;
+            font-size:12px;
+            position:relative;
+            background:yellow;
+            margin-top:20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav" id="myTopnav" ng-app="myApp" ng-controller="myCtrl">
+        <img src="../Images/logo.jpg" height="60" width="80" style="margin:0px 150px 0px 40px"/>
+        <button value="Login" name="Login">Login</button>
+        <input type="text" ng-model="password" />
+        <input type="text" ng-model="userName"/>
+    </div>
+    <div class="view1">
+        <img src="../Images/Home.jpg" alt="Play View"/>
+        <a href="#cricket" style="margin-left:30px">CRICKET</a>
+        <a href="#tennis">TENNIS</a>
+        <a href="#soccer">SOCCER</a>
+        <a href="#spine">SPINE</a>
+        <img src="../Images/androidIcon.png" style="width:50px;height:40px;position:absolute;padding-left:350px;padding-top:20px"/>
+    </div>
+    <script src="../Scripts/angular.min.js"></script>
+    <script>
+        var app = angular.module("myApp", []);
+
+        app.controller("myCtrl", function ($scope) {
+            $scope.userName = "username";
+            $scope.password = "password";
+        });
+    </script>
+</body>
+
+
+</html>
